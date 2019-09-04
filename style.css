@@ -1,0 +1,78 @@
+:root{
+    --header-bg-color : #000;
+    --main-bg-color : #1b1c1f;
+    --block-bg-color : #2a2a2a;
+    --highlight-color : #3862bb;
+    --bar-fill-color : #5290e9;
+    --gridline-color : #363636;
+    --text-color : #333;
+    --tickvalues-color : #a0a1a1;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin : 0;
+}
+body{
+    font-family: "montserrat",Arial, Helvetica, sans-serif;
+    background-color : #333;
+    color : #333;
+}
+.black-bg{
+    background-color : var(--header-bg-color);
+}
+.main-bg{
+    background-color : var(--main-bg-color);
+}
+.block-bg{
+    background-color : var(--block-bg-color);
+}
+
+.body{
+    height: calc(100% - 40px);
+}
+.body .row{
+    height: 49.2%;
+}
+.body .row:first-child{
+    margin-bottom: 0.8%;
+}
+.chart-container{
+    padding : 0;
+}
+.grid-hline .tick line,.grid-hline .domain{
+    stroke: var(--text-color);
+}
+.title{
+    font-size: 10px;
+    text-anchor: middle;
+    fill : #fff;
+}
+.hover-bar{
+    fill : var(--highlight-color);
+}
+.bar{
+    fill : var(--bar-fill-color);
+}
+.axis .tick line{
+    stroke : var(--highlight-color);
+}
+.axis .tick text{
+    fill : var(--tickvalues-color);
+}
+.axis .domain{
+    stroke : var(--highlight-color);
+}
+
+.line{
+    fill : none;
+    stroke : var(--bar-fill-color);
+    stroke-width: 3;
+}
+#svg-bar .axis .domain, .grid-hline .domain, .axis .tick line{
+    display: none;
+}
+#svg-line .axis .domain, .grid-hline .domain, .axis .tick line{
+    display: none;
+}
